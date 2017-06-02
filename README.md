@@ -1,2 +1,2 @@
 # django-botmanager
-Async tasks in django 
+Async tasks for django
