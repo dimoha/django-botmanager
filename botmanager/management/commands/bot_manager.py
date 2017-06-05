@@ -11,6 +11,7 @@ from time import sleep, time
 from botmanager.models import Task
 from botmanager.utils import management_lock
 from django.db.models import Q
+from django.utils import timezone
 try:
     from setproctitle import setproctitle
 except ImportError:
@@ -114,7 +115,7 @@ class Command(BotManagerBaseCommand):
         Task.objects.filter(
             Q(parent=None) | Q(parent__is_complete=True),
             is_complete=True,
-            finish_dt__lt=datetime.now()-timedelta(hours=tasks_life_hours)
+            finish_dt__lt=timezone.now()-timedelta(hours=tasks_life_hours)
         ).delete()
 
     @management_lock
