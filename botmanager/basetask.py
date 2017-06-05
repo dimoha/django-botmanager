@@ -11,6 +11,7 @@ from django.db import connection
 from datetime import datetime, timedelta
 from hashlib import md5
 from botmanager import BotManagerTaskError
+from django.utils import timezone
 
 
 LOGGING = settings.TASKS_LOGGING
@@ -213,7 +214,7 @@ class BotManagerBaseTask(object):
         else:
             is_complete = True
 
-        now = datetime.now()
+        now = timezone.now()
 
         self.task.is_complete = is_complete
         if is_complete:
