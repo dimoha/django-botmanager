@@ -189,7 +189,7 @@ class BotManagerBaseTask(object):
                     logging.exception(e)
                     self.task.failed_action = action
                     is_error_handled = self._handle_error(e)
-                    self.task.last_error_dt = datetime.now()
+                    self.task.last_error_dt = timezone.now()
                     self.task.last_error = {
                         'error': str(e),
                         'trace': traceback.format_exc(),
