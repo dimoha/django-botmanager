@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from jsonfield import JSONField
 from datetime import timedelta, datetime
+from django.utils import timezone
 
 
 class Task(models.Model):
@@ -49,7 +50,7 @@ class Task(models.Model):
     def can_execute(self):
         if not self.is_complete and not self.in_process:
             if self.is_failed:
-                if self.last_attempt_dt + self.attempt_period > datetime.now():
+                if self.last_attempt_dt + self.attempt_period > timezone.now():
                     return False
                 else:
                     if self.max_attempt_count is None:
