@@ -11,6 +11,7 @@ from time import sleep, time
 from botmanager.models import Task
 from botmanager.utils import management_lock
 from django.db.models import Q
+from django.db import connections
 from django.utils import timezone
 try:
     from setproctitle import setproctitle
@@ -58,13 +59,14 @@ class Command(BotManagerBaseCommand):
 
     @staticmethod
     def start_service(service):
-        # from django import db
-        # db.close_connection()
         logging.info(u"Start task manager {0}".format(service.process_name))
+        connections.close_all()
         try:
             service.run()
         except KeyboardInterrupt:
             pass
+        finally:
+            connections.close_all()
 
     def handle(self, *args, **options):
         if options['action'] in ['stop', 'restart']:
