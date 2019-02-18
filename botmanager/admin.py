@@ -6,9 +6,9 @@ from botmanager.models import Task
 
 class TaskAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'is_complete', 'in_process', 'is_failed',
-                    'create_dt', 'finish_dt', 'input', 'error_field', 'attempt_period', 'attempt_count']
+                    'create_dt', 'finish_dt', 'error_field', 'attempt_period', 'attempt_count', 'input_field']
     list_filter = ('is_complete', 'is_failed', 'in_process', 'name')
-    search_fields = ('id', 'name', 'input')
+    search_fields = ('id', 'name')
 
     def get_queryset(self, request):
         qs = super(TaskAdmin, self).get_queryset(request)
@@ -31,5 +31,9 @@ class TaskAdmin(admin.ModelAdmin):
     error_field.short_description = u"Ошибка"
     error_field.allow_tags = True
 
+    def input_field(self, obj):
+        return obj.input
+
+    input_field.short_description = "Вводные данные"
 
 admin.site.register(Task, TaskAdmin)

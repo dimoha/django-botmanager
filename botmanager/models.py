@@ -40,7 +40,7 @@ class Task(models.Model):
         verbose_name=u"Максимальное кол-во попыток выполнение (если None, то бесконечно)", null=True, blank=True
     )
     attempt_period = models.DurationField(verbose_name=u'Период между попытками', default=timedelta(hours=1))
-    parent = models.ForeignKey('self', verbose_name=u'Родительская задача', null=True, blank=True, related_name='child_tasks')
+    parent = models.ForeignKey('self', verbose_name=u'Родительская задача', null=True, blank=True, related_name='child_tasks', on_delete=models.CASCADE)
     priority = models.SmallIntegerField(default=0)
 
     def __unicode__(self):

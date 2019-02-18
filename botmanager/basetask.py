@@ -47,7 +47,7 @@ class BotManagerBaseTask(object):
 
     @classmethod
     def get_queue_key(cls, task_input):
-        return md5('%s_%s' % (cls.name, json.dumps(task_input))).hexdigest()
+        return md5('{}_{}'.format(cls.name, json.dumps(task_input)).encode('utf-8')).hexdigest()
 
     @classmethod
     def create(cls, **kwargs):
