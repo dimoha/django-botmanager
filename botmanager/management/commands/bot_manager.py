@@ -1,18 +1,27 @@
 # -*- coding: utf-8 -*-
-from datetime import datetime, timedelta
-import logging
 import importlib
+import logging
 import os
-from botmanager.management.commands import BotManagerBaseCommand, BotManagerBaseCommandException
-from botmanager import settings
+import sys
+from datetime import datetime, timedelta
 from multiprocessing import Queue, Process
-from Queue import Empty as QueueEmpty
 from time import sleep, time
+
+import six
+from django.db import connections
+from django.db.models import Q
+from django.utils import timezone
+
+from botmanager import settings
+from botmanager.management.commands import BotManagerBaseCommand, BotManagerBaseCommandException
 from botmanager.models import Task
 from botmanager.utils import management_lock
-from django.db.models import Q
-from django.db import connections
-from django.utils import timezone
+
+if six.PY2:
+    from Queue import Empty as QueueEmpty
+else:
+    from queue import Empty as QueueEmpty
+
 try:
     from setproctitle import setproctitle
 except ImportError:
@@ -54,9 +63,6 @@ class Command(BotManagerBaseCommand):
                 u"Could not import '%s' for setting. %s: %s." % (val, e.__class__.__name__, e)
             )
 
-    def kill_bm(self):
-        os.popen("pkill -9 BotManager.")
-
     @staticmethod
     def start_service(service):
         logging.info(u"Start task manager {0}".format(service.process_name))
@@ -73,7 +79,6 @@ class Command(BotManagerBaseCommand):
             if options['soft']:
                 raise NotImplementedError("Soft stopping is not implemented")
             else:
-                self.kill_bm()
                 logging.info("BotManager stopped.")
                 if options['action'] == 'stop':
                     return
@@ -87,7 +92,7 @@ class Command(BotManagerBaseCommand):
             for f in files:
                 log_file_path = os.path.join(dir_path, f)
                 if os.path.isfile(os.path.join(dir_path, f)):
-                    hours = (int(time()) - int(os.path.getctime(log_file_path)))/3600
+                    hours = (int(time()) - int(os.path.getctime(log_file_path))) / 3600
                     if hours >= life_hours or full_clean:
                         logging.debug('clean file: {0} ({1} days)'.format(log_file_path, hours))
                         os.remove(log_file_path)
@@ -117,15 +122,11 @@ class Command(BotManagerBaseCommand):
         Task.objects.filter(
             Q(parent=None) | Q(parent__is_complete=True),
             is_complete=True,
-            finish_dt__lt=timezone.now()-timedelta(hours=tasks_life_hours)
+            finish_dt__lt=timezone.now() - timedelta(hours=tasks_life_hours)
         ).delete()
 
     @management_lock
     def run(self, *args, **options):
-
-        # Раз мы прошли @management_lock, значит процессов в данный момент быть не должно
-        # но попытаемся убить, если таковые бесконтрольные остались
-        self.kill_bm()
 
         self.set_logging()
 
@@ -136,7 +137,7 @@ class Command(BotManagerBaseCommand):
 
         processes = []
         queue_dict = {}
-        for task_class_string, processes_count in self.config['tasks'].iteritems():
+        for task_class_string, processes_count in self.config['tasks'].items():
             cls_name = task_class_string.split('.')[-1]
             if options['task_cls'] and cls_name != options['task_cls']:
                 logging.info('Continue task class {}'.format(cls_name))
@@ -145,12 +146,12 @@ class Command(BotManagerBaseCommand):
             self._validate_task_class(task_class)
             # task_class.prepare()
 
-            maxsize = processes_count*10
+            maxsize = processes_count * 10
             queue_dict[task_class.name] = Queue(maxsize=maxsize)
             queue_dict[task_class.name].maxsize = maxsize
 
             for i in range(processes_count):
-                tm = TaskManager(task_class, queue_dict[task_class.name], i+1, current_pid)
+                tm = TaskManager(task_class, queue_dict[task_class.name], i + 1, current_pid)
                 p = Process(target=Command.start_service, args=(tm,))
                 p.name = tm.process_name
                 p.daemon = True
@@ -235,7 +236,7 @@ class TaskSheduler(object):
                 logging.info(u"Parent process is die. Exit..")
                 break
 
-            for task_class_string, processes_count in self.config['tasks'].iteritems():
+            for task_class_string, processes_count in self.config['tasks'].items():
                 task_class = Command.import_from_string(task_class_string)
 
                 if self._time_to_set_tasks_for(task_class) and task_class.SELF_SUPPORT:
@@ -321,6 +322,8 @@ class TaskFetcher(object):
                                 task.save(update_fields=('in_process',))
                                 running_tasks[task.queue_key] = task.id
                                 self.queue_dict[task.name].put(task)
+            except KeyboardInterrupt:
+                sys.exit()
             except Exception as e:
                 logging.exception(e)
 
