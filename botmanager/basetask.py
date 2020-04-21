@@ -108,6 +108,10 @@ class BotManagerBaseTask(object):
         if project_settings.DEBUG:
             handlers.append('console')
 
+        sentry_enabled = self.config['logs'].get('sentry_enabled', False)
+        if sentry_enabled:
+            handlers.append('sentry')
+
         LOGGING['loggers'][log_handler_name] = {
             'handlers': handlers,
             'level': 'INFO',
