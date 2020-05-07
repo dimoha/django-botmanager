@@ -1,8 +1,13 @@
 from django.conf import settings
+import copy
 import sys
 import os
 
-MAIN_CONFIG = getattr(settings, 'BOTMANAGER_CONFIG', {})
+MAIN_CONFIG = copy.copy(getattr(settings, 'BOTMANAGER_CONFIG', {}))
+
+if 'fetch_period' not in MAIN_CONFIG:
+    MAIN_CONFIG['fetch_period'] = 5
+
 if 'logs' not in MAIN_CONFIG:
     MAIN_CONFIG['logs'] = {}
 if 'tasks' not in MAIN_CONFIG:

@@ -255,12 +255,12 @@ class TaskSheduler(object):
 
 
 class TaskFetcher(object):
-    FETCH_PERIOD_SECONDS = 5
 
     def __init__(self, queue_dict, parent_pid):
         self.process_name = "BotManager.TaskFetcher"
         self.queue_dict = queue_dict
         self.parent_pid = parent_pid
+        self.config = settings.MAIN_CONFIG
 
     def run(self):
         """
@@ -327,7 +327,7 @@ class TaskFetcher(object):
             except Exception as e:
                 logging.exception(e)
 
-            sleep(self.FETCH_PERIOD_SECONDS)
+            sleep(self.config['fetch_period'])
 
     def _get_qsize(self, task):
         try:
