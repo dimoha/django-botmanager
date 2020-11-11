@@ -183,6 +183,8 @@ class Command(BotManagerBaseCommand):
             logs_life_hours, tasks_life_hours, need_remove_logs, need_remove_tasks
         ))
 
+        connections.close_all()
+
         while True:
             statuses = set(map(lambda x: x.is_alive(), processes))
             if len(statuses) == 1 and list(statuses)[0] is False:
