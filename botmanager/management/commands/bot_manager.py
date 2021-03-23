@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import importlib
+import json
 import logging
 import os
 import sys
@@ -7,6 +8,7 @@ from datetime import datetime, timedelta
 from multiprocessing import Queue, Process
 from time import sleep, time
 
+import psutil
 import six
 from django.db import connections, transaction, connection
 from django.db.models import Q
@@ -133,7 +135,12 @@ class Command(BotManagerBaseCommand):
         logging.info(u"Starting BotManager")
         setproctitle(u"BotManager.General")
 
+        if PidsFileController.check_running_processes():
+            logging.info(u"BotManager is stopped. A running process was found")
+            return
+
         current_pid = os.getpid()
+        PidsFileController.add_pid(current_pid)
 
         processes = []
         queue_dict = {}
@@ -157,6 +164,7 @@ class Command(BotManagerBaseCommand):
                 p.daemon = True
                 p.start()
                 processes.append(p)
+                PidsFileController.add_pid(p.pid)
 
         tf = TaskFetcher(queue_dict, current_pid)
         p = Process(target=Command.start_service, args=(tf,))
@@ -164,6 +172,7 @@ class Command(BotManagerBaseCommand):
         p.daemon = True
         p.start()
         processes.append(p)
+        PidsFileController.add_pid(p.pid)
 
         if not options.get('without_sheduller'):
             ts = TaskSheduler(self.config, current_pid)
@@ -172,6 +181,7 @@ class Command(BotManagerBaseCommand):
             p.daemon = True
             p.start()
             processes.append(p)
+            PidsFileController.add_pid(p.pid)
 
         next_clean_logs_dt = next_clean_tasks_dt = datetime.now() + timedelta(seconds=10)
         logs_life_hours = self.config['logs']['logs_life_hours']
@@ -424,3 +434,73 @@ class TaskManager(object):
                 logging.exception(
                     u"Error in queue preparing: %s".format(e)
                 )
+
+
+class PidsFileController(object):
+    def __init__(self):
+        pass
+
+    @classmethod
+    def get_pids_filename(cls):
+        from django.conf import settings
+
+        if not settings.BASE_DIR:
+            raise BotManagerCommandException(u"settings.BASE_DIR is empty")
+
+        if not os.path.exists(settings.BASE_DIR):
+            raise BotManagerCommandException(u"settings.BASE_DIR not exists")
+
+        return os.path.join(settings.BASE_DIR, 'botmanager.pids')
+
+    @classmethod
+    def get_process_create_time(cls, pid):
+        try:
+            p = psutil.Process(pid)
+            return p.create_time()
+        except psutil.NoSuchProcess:
+            return
+
+    @classmethod
+    def add_pid(cls, pid):
+        create_time = cls.get_process_create_time(pid)
+        if not create_time:
+            return
+
+        with open(cls.get_pids_filename(), 'a+') as f:
+            f.write('{}\n'.format(json.dumps({'pid': pid, 'create_time': create_time})))
+
+    @classmethod
+    def check_running_processes(cls):
+        logging.info(u"Start check_running_processes")
+
+        pids_file_name = cls.get_pids_filename()
+        if not os.path.exists(pids_file_name):
+            return
+
+        with open(pids_file_name) as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                process = json.loads(line)
+                logging.info(u"\tchecking process: {}".format(process))
+
+                create_time = cls.get_process_create_time(process['pid'])
+                if not create_time:
+                    logging.info(u"\tprocess: {} is not running".format(process))
+                    continue
+
+                if create_time != process['create_time']:
+                    logging.info(
+                        u"\tprocess: {} is not running, process create_time={} != saved create_time={}".format(
+                            process, create_time, process['create_time']
+                        )
+                    )
+                    continue
+
+                logging.info('\tprocess: {} is running'.format(process))
+                return True
+
+        if os.path.exists(pids_file_name):
+            os.remove(pids_file_name)
+
