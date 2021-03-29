@@ -274,18 +274,6 @@ class TaskFetcher(object):
         self.parent_pid = parent_pid
         self.config = settings.MAIN_CONFIG
 
-    def _release_old_in_process_tasks(self, old_in_process_task_ids):
-        if not old_in_process_task_ids:
-            return
-
-        released_ids = set()
-        for task_id in old_in_process_task_ids:
-            is_released = self._release_old_in_process_task(task_id)
-            if is_released:
-                released_ids.add(task_id)
-
-        old_in_process_task_ids -= released_ids
-
     def run(self):
         """
         Сделано на скорую руку. На текущих объемах этого более чем достаточно, но при увеличении кол-ва тасков,
@@ -300,15 +288,13 @@ class TaskFetcher(object):
         5. in_process ставится отдельно на каждую взятую задачу а не разово на всех.
         """
         setproctitle(self.process_name)
-        old_in_process_task_ids = set(Task.objects.filter(in_process=True).values_list('pk', flat=True))
+        Task.objects.filter(in_process=True).update(in_process=False)
         while True:
             try:
 
                 if os.getppid() != self.parent_pid:
                     logging.info(u"Parent process is die. Exit..")
                     break
-
-                self._release_old_in_process_tasks(old_in_process_task_ids)
 
                 tasks = Task.objects.filter(
                     is_complete=False
@@ -355,20 +341,6 @@ class TaskFetcher(object):
 
             sleep(self.config['fetch_period'])
 
-    @transaction.atomic
-    def _release_old_in_process_task(self, task_id):
-        task = lock_task(task_id)
-        if not task:
-            return
-
-        if task.is_complete:
-            logging.info('task_id={} already completed'.format(task.id))
-            return True
-
-        task.in_process = False
-        task.save(update_fields=['in_process'])
-        return True
-
     def _get_qsize(self, task):
         try:
             return self.queue_dict[task.name].qsize()
@@ -389,26 +361,9 @@ class TaskManager(object):
     def __str__(self):
         return self.process_name
 
-    def _on_commit(self):
-        logging.info('Closing connection to DB...')
-        connection.close()
-
-    @transaction.atomic
     def run_task(self, task):
         logging.info(u"Start {0}".format(task))
-        task = lock_task(task.pk)
-        if not task:
-            logging.info(u"lock_task is empty")
-            return
-
-        if task.is_complete:
-            logging.info('task_id={} already completed'.format(task.id))
-            return
-
         self.task_class(task).run()
-        transaction.on_commit(self._on_commit)
-
-        logging.info(u"End {0}".format(task))
 
     def run(self):
         setproctitle(self.process_name)
