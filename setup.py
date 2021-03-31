@@ -11,6 +11,7 @@ setup(
     install_requires=[
         "setproctitle==1.1.10",
         "jsonfield==1.0.3"
+        "psutil==5.8.0"
     ],
     packages=find_packages(),
 )
