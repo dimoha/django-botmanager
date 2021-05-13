@@ -21,6 +21,10 @@ class StopTaskSuccess(BotManagerTaskError):
     pass
 
 
+class TaskTemporarilyException(BotManagerTaskError):
+    pass
+
+
 class BotManagerBaseTask(object):
 
     actions = []
@@ -190,7 +194,10 @@ class BotManagerBaseTask(object):
                     logging.info(u'Stop actions because StopTaskSuccess caught')
                     break
                 except Exception as e:
-                    logging.exception(e)
+
+                    if not isinstance(e, TaskTemporarilyException):
+                        logging.exception(e)
+
                     self.task.failed_action = action
                     is_error_handled = self._handle_error(e)
                     self.task.last_error_dt = timezone.now()
