@@ -10,7 +10,7 @@ setup(
     url='https://github.com/dimoha/django-botmanager',
     install_requires=[
         "setproctitle==1.1.10",
-        "jsonfield==1.0.3"
+        "jsonfield==1.0.3",
         "psutil==5.8.0"
     ],
     packages=find_packages(),
