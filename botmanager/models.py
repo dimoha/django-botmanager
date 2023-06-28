@@ -4,7 +4,7 @@ from django.db import models
 from jsonfield import JSONField
 from datetime import timedelta, datetime
 from django.utils import timezone
-
+from django.utils.translation import gettext_lazy as _
 
 class Task(models.Model):
 
@@ -18,29 +18,29 @@ class Task(models.Model):
         (STATUS_OK, u'Данные загружены'),
     )
 
-    name = models.CharField(max_length=256, verbose_name=u'Название')
-    create_dt = models.DateTimeField(verbose_name=u"Дата создания задачи", auto_now_add=True)
-    finish_dt = models.DateTimeField(verbose_name=u"Дата завершения", null=True, blank=True)
-    is_complete = models.BooleanField(verbose_name=u"Выполнена", default=False)
-    is_failed = models.BooleanField(verbose_name=u"Аварийное завершение", default=False)
-    is_persistent = models.BooleanField(verbose_name=u"Выполнять пока не завершится успешно", default=True)
-    in_process = models.BooleanField(verbose_name=u"В процессе", default=False)
+    name = models.CharField(max_length=256, verbose_name=_(u'Название'))
+    create_dt = models.DateTimeField(verbose_name=_(u"Дата создания задачи"), default=timezone.now)
+    finish_dt = models.DateTimeField(verbose_name=_(u"Дата завершения"), null=True, blank=True)
+    is_complete = models.BooleanField(verbose_name=_(u"Выполнена"), default=False)
+    is_failed = models.BooleanField(verbose_name=_(u"Аварийное завершение"), default=False)
+    is_persistent = models.BooleanField(verbose_name=_(u"Выполнять пока не завершится успешно"), default=True)
+    in_process = models.BooleanField(verbose_name=_(u"В процессе"), default=False)
 
     input = JSONField(null=True, blank=True)
     output = JSONField(null=True, blank=True)
     last_error = JSONField(null=True, blank=True)
     extra_params = JSONField(null=True, blank=True)
 
-    last_error_dt = models.DateTimeField(verbose_name=u"Дата последнего fail-а", null=True, blank=True)
-    queue_key = models.CharField(max_length=32, verbose_name=u'Ключ группировки задач')
-    failed_action = models.CharField(max_length=256, verbose_name=u'Action, на котором произошла ошибка', null=True, blank=True)
-    attempt_count = models.SmallIntegerField(verbose_name=u'Счетчик попыток', default=0)
-    last_attempt_dt = models.DateTimeField(verbose_name=u"Последняя попытка выполнения", null=True, blank=True)
+    last_error_dt = models.DateTimeField(verbose_name=_(u"Дата последнего fail-а"), null=True, blank=True)
+    queue_key = models.CharField(max_length=32, verbose_name=_(u'Ключ группировки задач'))
+    failed_action = models.CharField(max_length=256, verbose_name=_(u'Action, на котором произошла ошибка'), null=True, blank=True)
+    attempt_count = models.SmallIntegerField(verbose_name=_(u'Счетчик попыток'), default=0)
+    last_attempt_dt = models.DateTimeField(verbose_name=_(u"Последняя попытка выполнения"), null=True, blank=True)
     max_attempt_count = models.IntegerField(
-        verbose_name=u"Максимальное кол-во попыток выполнение (если None, то бесконечно)", null=True, blank=True
+        verbose_name=_(u"Максимальное кол-во попыток выполнение (если None, то бесконечно)"), null=True, blank=True
     )
-    attempt_period = models.DurationField(verbose_name=u'Период между попытками', default=timedelta(hours=1))
-    parent = models.ForeignKey('self', verbose_name=u'Родительская задача', null=True, blank=True, related_name='child_tasks', on_delete=models.CASCADE)
+    attempt_period = models.DurationField(verbose_name=_(u'Период между попытками'), default=timedelta(hours=1))
+    parent = models.ForeignKey('self', verbose_name=_(u'Родительская задача'), null=True, blank=True, related_name='child_tasks', on_delete=models.CASCADE)
     priority = models.SmallIntegerField(default=0)
 
     def __unicode__(self):
@@ -67,5 +67,5 @@ class Task(models.Model):
 
     class Meta:
         db_table = 'botmanager_task'
-        verbose_name = u"Задача для BotManager"
-        verbose_name_plural = u"Задачи для BotManager"
+        verbose_name = _(u"Задача для BotManager")
+        verbose_name_plural = _(u"Задачи для BotManager")
