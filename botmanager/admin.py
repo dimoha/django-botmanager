@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 from django.utils.html import escape
+from django.utils.translation import gettext_lazy as _
 from botmanager.models import Task
 
 
@@ -28,12 +29,12 @@ class TaskAdmin(admin.ModelAdmin):
         else:
             return None
 
-    error_field.short_description = u"Ошибка"
+    error_field.short_description = _("Ошибка")
     error_field.allow_tags = True
 
     def input_field(self, obj):
         return obj.input
 
-    input_field.short_description = "Вводные данные"
+    input_field.short_description = _("Вводные данные")
 
 admin.site.register(Task, TaskAdmin)
