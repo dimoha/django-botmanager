@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Ошибка"
+msgstr "Erreur"
+
+msgid "Вводные данные"
+msgstr "Des données d'entrée"
+
+msgid "В ожидании"
+msgstr "En attente"
+
+msgid "Идет загрузка"
+msgstr "Chargement"
+
+msgid "Данные загружены"
+msgstr "Données chargées"
+
+msgid "Название"
+msgstr "Nom"
+
+msgid "Дата создания задачи"
+msgstr "Date de création de la tâche"
+
+msgid "Дата завершения"
+msgstr "Date d'achèvement"
+
+msgid "Выполнена"
+msgstr "Complété"
+
+msgid "Аварийное завершение"
+msgstr "Accident"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Exécuter jusqu'à succès"
+
+msgid "В процессе"
+msgstr "En cours"
+
+msgid "Дата последнего fail-а"
+msgstr "Date du dernier échec"
+
+msgid "Ключ группировки задач"
+msgstr "Clé de regroupement de tâches"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Action où l'erreur s'est produite"
+
+msgid "Счетчик попыток"
+msgstr "Compteur de tentatives"
+
+msgid "Последняя попытка выполнения"
+msgstr "Dernière tentative d'exécution"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Nombre maximum de tentatives d'exécution (si Aucune, alors infini)"
+
+msgid "Период между попытками"
+msgstr "Période entre les tentatives"
+
+msgid "Родительская задача"
+msgstr "Tâche parentale"
+
+msgid "Задача для BotManager"
+msgstr "Tâche pour BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Tâches pour BotManager"

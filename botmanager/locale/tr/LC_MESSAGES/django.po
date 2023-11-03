@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Ошибка"
+msgstr "Hata"
+
+msgid "Вводные данные"
+msgstr "Giriş verileri"
+
+msgid "В ожидании"
+msgstr "Askıda olması"
+
+msgid "Идет загрузка"
+msgstr "Yükleniyor"
+
+msgid "Данные загружены"
+msgstr "Veri yüklendi"
+
+msgid "Название"
+msgstr "İsim"
+
+msgid "Дата создания задачи"
+msgstr "Görev oluşturma tarihi"
+
+msgid "Дата завершения"
+msgstr "Tamamlanma tarihi"
+
+msgid "Выполнена"
+msgstr "Tamamlanmış"
+
+msgid "Аварийное завершение"
+msgstr "Kaza"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Başarılı olana kadar çalıştırın"
+
+msgid "В процессе"
+msgstr "Devam etmekte"
+
+msgid "Дата последнего fail-а"
+msgstr "Son başarısızlık tarihi"
+
+msgid "Ключ группировки задач"
+msgstr "Görev gruplandırma anahtarı"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Hatanın oluştuğu eylem"
+
+msgid "Счетчик попыток"
+msgstr "Deneme sayacı"
+
+msgid "Последняя попытка выполнения"
+msgstr "Son yürütme denemesi"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Maksimum yürütme denemesi sayısı (Yoksa sonsuzdur)"
+
+msgid "Период между попытками"
+msgstr "Denemeler arasındaki süre"
+
+msgid "Родительская задача"
+msgstr "Ebeveyn görevi"
+
+msgid "Задача для BotManager"
+msgstr "BotManager için görev"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager için Görevler"

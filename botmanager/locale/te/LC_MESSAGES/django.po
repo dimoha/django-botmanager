@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "లోపం"
+
+msgid "Вводные данные"
+msgstr "ఇన్పుట్ డేటా"
+
+msgid "В ожидании"
+msgstr "పెండింగ్‌లో ఉంది"
+
+msgid "Идет загрузка"
+msgstr "లోడ్"
+
+msgid "Данные загружены"
+msgstr "డేటా లోడ్ చేయబడింది"
+
+msgid "Название"
+msgstr "పేరు"
+
+msgid "Дата создания задачи"
+msgstr "టాస్క్ సృష్టి తేదీ"
+
+msgid "Дата завершения"
+msgstr "పూర్తయిన తేదీ"
+
+msgid "Выполнена"
+msgstr "పూర్తయింది"
+
+msgid "Аварийное завершение"
+msgstr "క్రాష్"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "విజయవంతం అయ్యే వరకు పరుగెత్తండి"
+
+msgid "В процессе"
+msgstr "పురోగతిలో ఉంది"
+
+msgid "Дата последнего fail-а"
+msgstr "చివరి ఫెయిల్ తేదీ"
+
+msgid "Ключ группировки задач"
+msgstr "టాస్క్ గ్రూపింగ్ కీ"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "లోపం సంభవించిన చోట చర్య"
+
+msgid "Счетчик попыток"
+msgstr "కౌంటర్ ప్రయత్నం"
+
+msgid "Последняя попытка выполнения"
+msgstr "చివరి అమలు ప్రయత్నం"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "అమలు ప్రయత్నాల గరిష్ట సంఖ్య (ఏదీ లేకుంటే, అనంతం)"
+
+msgid "Период между попытками"
+msgstr "ప్రయత్నాల మధ్య కాలం"
+
+msgid "Родительская задача"
+msgstr "తల్లిదండ్రుల పని"
+
+msgid "Задача для BotManager"
+msgstr "BotManager కోసం టాస్క్"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager కోసం విధులు"

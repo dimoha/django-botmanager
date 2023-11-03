@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "Gabim"
+
+msgid "Вводные данные"
+msgstr "Fut te dhenat"
+
+msgid "В ожидании"
+msgstr "Në pritje"
+
+msgid "Идет загрузка"
+msgstr "Po ngarkohet"
+
+msgid "Данные загружены"
+msgstr "Të dhënat u ngarkuan"
+
+msgid "Название"
+msgstr "Emri"
+
+msgid "Дата создания задачи"
+msgstr "Data e krijimit të detyrës"
+
+msgid "Дата завершения"
+msgstr "Data e përfundimit"
+
+msgid "Выполнена"
+msgstr "E përfunduar"
+
+msgid "Аварийное завершение"
+msgstr "Përplasje"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Vraponi deri sa të keni sukses"
+
+msgid "В процессе"
+msgstr "Në vazhdim"
+
+msgid "Дата последнего fail-а"
+msgstr "Data e fundit e dështimit"
+
+msgid "Ключ группировки задач"
+msgstr "Tasti i grupimit të detyrave"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Veprimi ku ndodhi gabimi"
+
+msgid "Счетчик попыток"
+msgstr "Përpjekje kundër"
+
+msgid "Последняя попытка выполнения"
+msgstr "Përpjekja e fundit për ekzekutim"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr ""
+"Numri maksimal i përpjekjeve të ekzekutimit (nëse Asnjë, atëherë i pafund)"
+
+msgid "Период между попытками"
+msgstr "Periudha ndërmjet përpjekjeve"
+
+msgid "Родительская задача"
+msgstr "Detyra prindërore"
+
+msgid "Задача для BotManager"
+msgstr "Detyrë për BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Detyrat për BotManager"

@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "ত্রুটি"
+
+msgid "Вводные данные"
+msgstr "তথ্য অন্তর্ভুক্তী"
+
+msgid "В ожидании"
+msgstr "বিচারাধীন"
+
+msgid "Идет загрузка"
+msgstr "লোড হচ্ছে"
+
+msgid "Данные загружены"
+msgstr "ডেটা লোড হয়েছে"
+
+msgid "Название"
+msgstr "নাম"
+
+msgid "Дата создания задачи"
+msgstr "টাস্ক তৈরির তারিখ"
+
+msgid "Дата завершения"
+msgstr "সমাপ্তির তারিখ"
+
+msgid "Выполнена"
+msgstr "সম্পন্ন"
+
+msgid "Аварийное завершение"
+msgstr "ক্রাশ"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "সফল না হওয়া পর্যন্ত চালান"
+
+msgid "В процессе"
+msgstr "চলমান"
+
+msgid "Дата последнего fail-а"
+msgstr "শেষ ব্যর্থতার তারিখ"
+
+msgid "Ключ группировки задач"
+msgstr "টাস্ক গ্রুপিং কী"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "যেখানে ত্রুটি ঘটেছে অ্যাকশন"
+
+msgid "Счетчик попыток"
+msgstr "পাল্টা চেষ্টা"
+
+msgid "Последняя попытка выполнения"
+msgstr "শেষ মৃত্যুদন্ডের প্রচেষ্টা"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr ""
+"সর্বোচ্চ সংখ্যক মৃত্যুদন্ড কার্যকর করার প্রচেষ্টা (যদি না থাকে, তাহলে অসীম)"
+
+msgid "Период между попытками"
+msgstr "প্রচেষ্টার মধ্যে সময়কাল"
+
+msgid "Родительская задача"
+msgstr "পিতামাতার কাজ"
+
+msgid "Задача для BotManager"
+msgstr "BotManager জন্য টাস্ক"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager জন্য কাজ"

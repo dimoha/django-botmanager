@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Ошибка"
+msgstr "ralat"
+
+msgid "Вводные данные"
+msgstr "Input data"
+
+msgid "В ожидании"
+msgstr "Yang belum selesai"
+
+msgid "Идет загрузка"
+msgstr "Memuatkan"
+
+msgid "Данные загружены"
+msgstr "Data dimuatkan"
+
+msgid "Название"
+msgstr "Nama"
+
+msgid "Дата создания задачи"
+msgstr "Tarikh penciptaan tugas"
+
+msgid "Дата завершения"
+msgstr "Tarikh siap"
+
+msgid "Выполнена"
+msgstr "Selesai"
+
+msgid "Аварийное завершение"
+msgstr "ranap"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Jalankan sehingga berjaya"
+
+msgid "В процессе"
+msgstr "Sedang berlangsung"
+
+msgid "Дата последнего fail-а"
+msgstr "Tarikh gagal terakhir"
+
+msgid "Ключ группировки задач"
+msgstr "Kunci pengumpulan tugas"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Tindakan di mana ralat berlaku"
+
+msgid "Счетчик попыток"
+msgstr "Kaunter percubaan"
+
+msgid "Последняя попытка выполнения"
+msgstr "Percubaan pelaksanaan terakhir"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr ""
+"Bilangan maksimum percubaan pelaksanaan (jika Tiada, maka tidak terhingga)"
+
+msgid "Период между попытками"
+msgstr "Tempoh antara percubaan"
+
+msgid "Родительская задача"
+msgstr "Tugas ibu bapa"
+
+msgid "Задача для BotManager"
+msgstr "Tugas untuk BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Tugas untuk BotManager"

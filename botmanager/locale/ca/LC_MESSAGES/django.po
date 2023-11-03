@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "Error"
+
+msgid "Вводные данные"
+msgstr "Dades d'entrada"
+
+msgid "В ожидании"
+msgstr "Pendents"
+
+msgid "Идет загрузка"
+msgstr "Carregant"
+
+msgid "Данные загружены"
+msgstr "Dades carregades"
+
+msgid "Название"
+msgstr "Nom"
+
+msgid "Дата создания задачи"
+msgstr "Data de creació de la tasca"
+
+msgid "Дата завершения"
+msgstr "Data de finalització"
+
+msgid "Выполнена"
+msgstr "Completat"
+
+msgid "Аварийное завершение"
+msgstr "Crash"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Executar fins que tingui èxit"
+
+msgid "В процессе"
+msgstr "En progrés"
+
+msgid "Дата последнего fail-а"
+msgstr "Última data de fallada"
+
+msgid "Ключ группировки задач"
+msgstr "Clau d'agrupació de tasques"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Acció on s'ha produït l'error"
+
+msgid "Счетчик попыток"
+msgstr "Comptador d'intents"
+
+msgid "Последняя попытка выполнения"
+msgstr "Últim intent d'execució"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Nombre màxim d'intents d'execució (si cap, aleshores infinit)"
+
+msgid "Период между попытками"
+msgstr "Període entre intents"
+
+msgid "Родительская задача"
+msgstr "Tasca dels pares"
+
+msgid "Задача для BotManager"
+msgstr "Tasca per a BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Tasques per a BotManager"

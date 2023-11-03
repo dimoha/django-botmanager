@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Ошибка"
+msgstr "Ката"
+
+msgid "Вводные данные"
+msgstr "Маалыматтарды киргизүү"
+
+msgid "В ожидании"
+msgstr "Күтүүдө"
+
+msgid "Идет загрузка"
+msgstr "Жүктөө"
+
+msgid "Данные загружены"
+msgstr "Дайындар жүктөлдү"
+
+msgid "Название"
+msgstr "аты"
+
+msgid "Дата создания задачи"
+msgstr "Тапшырма түзүлгөн күн"
+
+msgid "Дата завершения"
+msgstr "аяктоо датасы"
+
+msgid "Выполнена"
+msgstr "Аякталды"
+
+msgid "Аварийное завершение"
+msgstr "Crash"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Ийгиликке чейин чуркаңыз"
+
+msgid "В процессе"
+msgstr "Прогрессте"
+
+msgid "Дата последнего fail-а"
+msgstr "Акыркы ийгиликсиз күн"
+
+msgid "Ключ группировки задач"
+msgstr "Тапшырмаларды топтоо ачкычы"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Ката болгон жердеги аракет"
+
+msgid "Счетчик попыток"
+msgstr "Эсептөө аракети"
+
+msgid "Последняя попытка выполнения"
+msgstr "Акыркы аткаруу аракети"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr ""
+"Аткаруу аракеттеринин максималдуу саны (эгерде эч ким жок болсо, анда "
+"чексиз)"
+
+msgid "Период между попытками"
+msgstr "Аракеттердин ортосундагы мезгил"
+
+msgid "Родительская задача"
+msgstr "Ата-энелик милдет"
+
+msgid "Задача для BotManager"
+msgstr "BotManager үчүн тапшырма"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager үчүн тапшырмалар"

@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+msgid "Ошибка"
+msgstr "Błąd"
+
+msgid "Вводные данные"
+msgstr "Dane wejściowe"
+
+msgid "В ожидании"
+msgstr "Aż do"
+
+msgid "Идет загрузка"
+msgstr "Ładowanie"
+
+msgid "Данные загружены"
+msgstr "Dane załadowane"
+
+msgid "Название"
+msgstr "Nazwa"
+
+msgid "Дата создания задачи"
+msgstr "Data utworzenia zadania"
+
+msgid "Дата завершения"
+msgstr "Data wypełnienia"
+
+msgid "Выполнена"
+msgstr "Zakończony"
+
+msgid "Аварийное завершение"
+msgstr "Rozbić się"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Uruchom, aż się powiedzie"
+
+msgid "В процессе"
+msgstr "W trakcie"
+
+msgid "Дата последнего fail-а"
+msgstr "Ostatnia data niepowodzenia"
+
+msgid "Ключ группировки задач"
+msgstr "Klucz grupowania zadań"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Akcja, w której wystąpił błąd"
+
+msgid "Счетчик попыток"
+msgstr "Licznik prób"
+
+msgid "Последняя попытка выполнения"
+msgstr "Ostatnia próba wykonania"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Maksymalna liczba prób wykonania (jeśli Brak, to nieskończona)"
+
+msgid "Период между попытками"
+msgstr "Okres pomiędzy próbami"
+
+msgid "Родительская задача"
+msgstr "Zadanie rodzica"
+
+msgid "Задача для BotManager"
+msgstr "Zadanie dla BotManagera"
+
+msgid "Задачи для BotManager"
+msgstr "Zadania dla BotManagera"

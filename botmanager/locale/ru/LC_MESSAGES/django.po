@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+msgid "Ошибка"
+msgstr "Ошибка"
+
+msgid "Вводные данные"
+msgstr "Вводные данные"
+
+msgid "В ожидании"
+msgstr "В ожидании"
+
+msgid "Идет загрузка"
+msgstr "Идет загрузка"
+
+msgid "Данные загружены"
+msgstr "Данные загружены"
+
+msgid "Название"
+msgstr "Название"
+
+msgid "Дата создания задачи"
+msgstr "Дата создания задачи"
+
+msgid "Дата завершения"
+msgstr "Дата завершения"
+
+msgid "Выполнена"
+msgstr "Выполнена"
+
+msgid "Аварийное завершение"
+msgstr "Аварийное завершение"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Выполнять пока не завершится успешно"
+
+msgid "В процессе"
+msgstr "В процессе"
+
+msgid "Дата последнего fail-а"
+msgstr "Дата последнего fail-а"
+
+msgid "Ключ группировки задач"
+msgstr "Ключ группировки задач"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Action, на котором произошла ошибка"
+
+msgid "Счетчик попыток"
+msgstr "Счетчик попыток"
+
+msgid "Последняя попытка выполнения"
+msgstr "Последняя попытка выполнения"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+
+msgid "Период между попытками"
+msgstr "Период между попытками"
+
+msgid "Родительская задача"
+msgstr "Родительская задача"
+
+msgid "Задача для BotManager"
+msgstr "Задача для BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Задачи для BotManager"

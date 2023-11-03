@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : (n > 2 && n < 20) ? 2 : 3;\n"
+
+msgid "Ошибка"
+msgstr "Mearachd"
+
+msgid "Вводные данные"
+msgstr "Dàta cuir a-steach"
+
+msgid "В ожидании"
+msgstr "A' feitheamh"
+
+msgid "Идет загрузка"
+msgstr "A' luchdachadh"
+
+msgid "Данные загружены"
+msgstr "Dàta air a luchdachadh"
+
+msgid "Название"
+msgstr "Ainm"
+
+msgid "Дата создания задачи"
+msgstr "Ceann-latha cruthachadh ghnìomhan"
+
+msgid "Дата завершения"
+msgstr "Ceann-latha crìochnachaidh"
+
+msgid "Выполнена"
+msgstr "Air a chrìochnachadh"
+
+msgid "Аварийное завершение"
+msgstr "Tuiteam"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Ruith gus a bhith soirbheachail"
+
+msgid "В процессе"
+msgstr "A’ dèanamh adhartais"
+
+msgid "Дата последнего fail-а"
+msgstr "Ceann-latha fàiligeadh mu dheireadh"
+
+msgid "Ключ группировки задач"
+msgstr "Iuchair airson buidheann ghnìomhan"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Gnìomh far an do thachair a' mhearachd"
+
+msgid "Счетчик попыток"
+msgstr "Feuch cuntair"
+
+msgid "Последняя попытка выполнения"
+msgstr "An oidhirp mu dheireadh gu bàs"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr ""
+"An àireamh as motha de dh’ oidhirpean cur gu bàs (mura h-eil gin ann, an "
+"uairsin gun chrìoch)"
+
+msgid "Период между попытками"
+msgstr "An ùine eadar oidhirpean"
+
+msgid "Родительская задача"
+msgstr "Obair phàrant"
+
+msgid "Задача для BotManager"
+msgstr "Gnìomh airson BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Gnìomhan airson BotManager"

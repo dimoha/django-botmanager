@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+
+msgid "Ошибка"
+msgstr "Kļūda"
+
+msgid "Вводные данные"
+msgstr "Ievadiet datus"
+
+msgid "В ожидании"
+msgstr "Gaida"
+
+msgid "Идет загрузка"
+msgstr "Notiek ielāde"
+
+msgid "Данные загружены"
+msgstr "Dati ielādēti"
+
+msgid "Название"
+msgstr "Vārds"
+
+msgid "Дата создания задачи"
+msgstr "Uzdevuma izveides datums"
+
+msgid "Дата завершения"
+msgstr "Pabeigšanas datums"
+
+msgid "Выполнена"
+msgstr "Pabeigts"
+
+msgid "Аварийное завершение"
+msgstr "Avārija"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Skrien līdz panākumiem"
+
+msgid "В процессе"
+msgstr "Notiek"
+
+msgid "Дата последнего fail-а"
+msgstr "Pēdējās neveiksmes datums"
+
+msgid "Ключ группировки задач"
+msgstr "Uzdevumu grupēšanas atslēga"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Darbība, kurā radās kļūda"
+
+msgid "Счетчик попыток"
+msgstr "Mēģinājumu skaitītājs"
+
+msgid "Последняя попытка выполнения"
+msgstr "Pēdējais izpildes mēģinājums"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Maksimālais izpildes mēģinājumu skaits (ja nav, tad bezgalīgs)"
+
+msgid "Период между попытками"
+msgstr "Periods starp mēģinājumiem"
+
+msgid "Родительская задача"
+msgstr "Vecāku uzdevums"
+
+msgid "Задача для BotManager"
+msgstr "BotManager uzdevums"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager uzdevumi"

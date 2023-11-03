@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "Fehler"
+
+msgid "Вводные данные"
+msgstr "Eingabedaten"
+
+msgid "В ожидании"
+msgstr "In Erwartung"
+
+msgid "Идет загрузка"
+msgstr "Wird geladen"
+
+msgid "Данные загружены"
+msgstr "Daten geladen"
+
+msgid "Название"
+msgstr "Name"
+
+msgid "Дата создания задачи"
+msgstr "Erstellungsdatum der Aufgabe"
+
+msgid "Дата завершения"
+msgstr "Datum der Fertigstellung"
+
+msgid "Выполнена"
+msgstr "Vollendet"
+
+msgid "Аварийное завершение"
+msgstr "Absturz"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Bis zum Erfolg ausführen"
+
+msgid "В процессе"
+msgstr "Im Gange"
+
+msgid "Дата последнего fail-а"
+msgstr "Letztes Ausfalldatum"
+
+msgid "Ключ группировки задач"
+msgstr "Schlüssel zur Aufgabengruppierung"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Aktion, bei der der Fehler aufgetreten ist"
+
+msgid "Счетчик попыток"
+msgstr "Versuchszähler"
+
+msgid "Последняя попытка выполнения"
+msgstr "Letzter Hinrichtungsversuch"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Maximale Anzahl an Ausführungsversuchen (wenn keine, dann unendlich)"
+
+msgid "Период между попытками"
+msgstr "Zeitraum zwischen Versuchen"
+
+msgid "Родительская задача"
+msgstr "Übergeordnete Aufgabe"
+
+msgid "Задача для BotManager"
+msgstr "Aufgabe für BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Aufgaben für BotManager"

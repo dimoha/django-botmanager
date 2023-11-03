@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+msgid "Ошибка"
+msgstr "Napaka"
+
+msgid "Вводные данные"
+msgstr "Vhodni podatki"
+
+msgid "В ожидании"
+msgstr "V teku"
+
+msgid "Идет загрузка"
+msgstr "nalaganje"
+
+msgid "Данные загружены"
+msgstr "Podatki so naloženi"
+
+msgid "Название"
+msgstr "Ime"
+
+msgid "Дата создания задачи"
+msgstr "Datum nastanka naloge"
+
+msgid "Дата завершения"
+msgstr "Datum zaključka"
+
+msgid "Выполнена"
+msgstr "Dokončano"
+
+msgid "Аварийное завершение"
+msgstr "Strmoglavljenje"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Teci do uspeha"
+
+msgid "В процессе"
+msgstr "V delu"
+
+msgid "Дата последнего fail-а"
+msgstr "Zadnji neuspešni datum"
+
+msgid "Ключ группировки задач"
+msgstr "Ključ za združevanje nalog"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Dejanje, kjer je prišlo do napake"
+
+msgid "Счетчик попыток"
+msgstr "Števec poskusov"
+
+msgid "Последняя попытка выполнения"
+msgstr "Zadnji poskus izvršitve"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Največje število poskusov izvedbe (če Nobenega, potem neskončno)"
+
+msgid "Период между попытками"
+msgstr "Obdobje med poskusi"
+
+msgid "Родительская задача"
+msgstr "Naloga staršev"
+
+msgid "Задача для BotManager"
+msgstr "Naloga za BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Naloge za BotManager"
