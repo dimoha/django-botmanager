@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "Errorea"
+
+msgid "Вводные данные"
+msgstr "Sarrerako datuak"
+
+msgid "В ожидании"
+msgstr "Zain"
+
+msgid "Идет загрузка"
+msgstr "Kargatzen"
+
+msgid "Данные загружены"
+msgstr "Datuak kargatuta"
+
+msgid "Название"
+msgstr "Izena"
+
+msgid "Дата создания задачи"
+msgstr "Ataza sortzeko data"
+
+msgid "Дата завершения"
+msgstr "Amaitzeko data"
+
+msgid "Выполнена"
+msgstr "Osatua"
+
+msgid "Аварийное завершение"
+msgstr "Istripua"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Exekutatu arrakasta arte"
+
+msgid "В процессе"
+msgstr "Abian"
+
+msgid "Дата последнего fail-а"
+msgstr "Azken huts data"
+
+msgid "Ключ группировки задач"
+msgstr "Zereginak taldekatzeko gakoa"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Errorea gertatu den ekintza"
+
+msgid "Счетчик попыток"
+msgstr "Saiakera kontagailua"
+
+msgid "Последняя попытка выполнения"
+msgstr "Azken exekuzio saiakera"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Gehienezko exekuzio saiakera kopurua (bat ere ez bada, infinitua)"
+
+msgid "Период между попытками"
+msgstr "Saiakera arteko epea"
+
+msgid "Родительская задача"
+msgstr "Gurasoen zeregina"
+
+msgid "Задача для BotManager"
+msgstr "BotManager-erako zeregina"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager-erako zereginak"

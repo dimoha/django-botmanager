@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "Error"
+
+msgid "Вводные данные"
+msgstr "Input data"
+
+msgid "В ожидании"
+msgstr "Pending"
+
+msgid "Идет загрузка"
+msgstr "Loading"
+
+msgid "Данные загружены"
+msgstr "Data loaded"
+
+msgid "Название"
+msgstr "Name"
+
+msgid "Дата создания задачи"
+msgstr "Task creation date"
+
+msgid "Дата завершения"
+msgstr "Date of completion"
+
+msgid "Выполнена"
+msgstr "Completed"
+
+msgid "Аварийное завершение"
+msgstr "Crash"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Run until successful"
+
+msgid "В процессе"
+msgstr "In progress"
+
+msgid "Дата последнего fail-а"
+msgstr "Last fail date"
+
+msgid "Ключ группировки задач"
+msgstr "Task grouping key"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Action where the error occurred"
+
+msgid "Счетчик попыток"
+msgstr "Attempt counter"
+
+msgid "Последняя попытка выполнения"
+msgstr "Last execution attempt"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Maximum number of execution attempts (if None, then infinite)"
+
+msgid "Период между попытками"
+msgstr "Period between attempts"
+
+msgid "Родительская задача"
+msgstr "Parent task"
+
+msgid "Задача для BotManager"
+msgstr "Task for BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Tasks for BotManager"

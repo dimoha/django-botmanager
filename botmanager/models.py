@@ -13,9 +13,9 @@ class Task(models.Model):
     STATUS_OK = 'OK'
 
     STATUSES = (
-        (STATUS_NEW, u'В ожидании'),
-        (STATUS_IN_PROCESS, u'Идет загрузка'),
-        (STATUS_OK, u'Данные загружены'),
+        (STATUS_NEW, _(u'В ожидании')),
+        (STATUS_IN_PROCESS, _(u'Идет загрузка')),
+        (STATUS_OK, _(u'Данные загружены')),
     )
 
     name = models.CharField(max_length=256, verbose_name=_(u'Название'))

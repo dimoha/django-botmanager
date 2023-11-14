@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Ошибка"
+msgstr "오류"
+
+msgid "Вводные данные"
+msgstr "입력 데이터"
+
+msgid "В ожидании"
+msgstr "보류 중"
+
+msgid "Идет загрузка"
+msgstr "로드 중"
+
+msgid "Данные загружены"
+msgstr "로드된 데이터"
+
+msgid "Название"
+msgstr "이름"
+
+msgid "Дата создания задачи"
+msgstr "작업 생성 날짜"
+
+msgid "Дата завершения"
+msgstr "완료 날짜"
+
+msgid "Выполнена"
+msgstr "완전한"
+
+msgid "Аварийное завершение"
+msgstr "충돌"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "성공할 때까지 실행"
+
+msgid "В процессе"
+msgstr "진행 중"
+
+msgid "Дата последнего fail-а"
+msgstr "마지막 실패 날짜"
+
+msgid "Ключ группировки задач"
+msgstr "작업 그룹화 키"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "오류가 발생한 작업"
+
+msgid "Счетчик попыток"
+msgstr "시도 카운터"
+
+msgid "Последняя попытка выполнения"
+msgstr "마지막 실행 시도"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "최대 실행 시도 횟수(없음인 경우 무한)"
+
+msgid "Период между попытками"
+msgstr "시도 간격"
+
+msgid "Родительская задача"
+msgstr "상위 작업"
+
+msgid "Задача для BotManager"
+msgstr "BotManager 작업"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager의 작업"

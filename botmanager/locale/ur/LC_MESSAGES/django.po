@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "خرابی"
+
+msgid "Вводные данные"
+msgstr "ان پٹ ڈیٹا"
+
+msgid "В ожидании"
+msgstr "زیر التواء"
+
+msgid "Идет загрузка"
+msgstr "لوڈ ہو رہا ہے۔"
+
+msgid "Данные загружены"
+msgstr "ڈیٹا لوڈ ہو گیا۔"
+
+msgid "Название"
+msgstr "نام"
+
+msgid "Дата создания задачи"
+msgstr "ٹاسک کی تخلیق کی تاریخ"
+
+msgid "Дата завершения"
+msgstr "تاریخ تکمیل"
+
+msgid "Выполнена"
+msgstr "مکمل"
+
+msgid "Аварийное завершение"
+msgstr "کریش"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "کامیاب ہونے تک چلائیں۔"
+
+msgid "В процессе"
+msgstr "کام جاری ہے"
+
+msgid "Дата последнего fail-а"
+msgstr "ناکامی کی آخری تاریخ"
+
+msgid "Ключ группировки задач"
+msgstr "ٹاسک گروپنگ کلید"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "ایکشن جہاں غلطی ہوئی ہے۔"
+
+msgid "Счетчик попыток"
+msgstr "انسداد کی کوشش"
+
+msgid "Последняя попытка выполнения"
+msgstr "پھانسی کی آخری کوشش"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr ""
+"عمل درآمد کی کوششوں کی زیادہ سے زیادہ تعداد (اگر کوئی نہیں، تو لامحدود)"
+
+msgid "Период между попытками"
+msgstr "کوششوں کے درمیان کا دورانیہ"
+
+msgid "Родительская задача"
+msgstr "والدین کا کام"
+
+msgid "Задача для BotManager"
+msgstr "BotManager کے لیے ٹاسک"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager کے لیے کام"

@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Ошибка"
+msgstr "အမှား"
+
+msgid "Вводные данные"
+msgstr "ဒေတာထည့်သွင်းပါ။"
+
+msgid "В ожидании"
+msgstr "ဆိုင်းငံ့ထားသည်။"
+
+msgid "Идет загрузка"
+msgstr "ဒိန်း"
+
+msgid "Данные загружены"
+msgstr "ဒေတာတင်ထားသည်။"
+
+msgid "Название"
+msgstr "နာမည်"
+
+msgid "Дата создания задачи"
+msgstr "လုပ်ဆောင်စရာ ဖန်တီးရက်စွဲ"
+
+msgid "Дата завершения"
+msgstr "ပြီးစီးသည့်ရက်စွဲ"
+
+msgid "Выполнена"
+msgstr "ပြီးသွားပြီ"
+
+msgid "Аварийное завершение"
+msgstr "ပျက်ကျ"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "အောင်မြင်သည်အထိ လုပ်ဆောင်ပါ။"
+
+msgid "В процессе"
+msgstr "ဆောင်ရွက်ဆဲဖြစ်သည်"
+
+msgid "Дата последнего fail-а"
+msgstr "နောက်ဆုံးကျရှုံးမည့်ရက်စွဲ"
+
+msgid "Ключ группировки задач"
+msgstr "လုပ်ငန်းအဖွဲ့ခွဲခြင်းကီး"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "error ဖြစ်ပွားသည့်နေရာတွင် အရေးယူခြင်း"
+
+msgid "Счетчик попыток"
+msgstr "တန်ပြန်ကြိုးစားပါ။"
+
+msgid "Последняя попытка выполнения"
+msgstr "နောက်ဆုံး ကွပ်မျက်ရန် ကြိုးစားမှု"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr ""
+"အကောင်ထည်ဖော်ရန် ကြိုးပမ်းမှု အရေအတွက် အများဆုံး (မရှိလျှင် အကန့်အသတ်မရှိ)"
+
+msgid "Период между попытками"
+msgstr "ကြိုးစားမှုကြားကာလ"
+
+msgid "Родительская задача"
+msgstr "မိဘတာဝန်"
+
+msgid "Задача для BotManager"
+msgstr "BotManager အတွက် လုပ်ဆောင်စရာ"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager အတွက် လုပ်ဆောင်စရာများ"

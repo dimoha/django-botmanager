@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+
+msgid "Ошибка"
+msgstr "Chyba"
+
+msgid "Вводные данные"
+msgstr "Vstupné Data"
+
+msgid "В ожидании"
+msgstr "Čaká na spracovanie"
+
+msgid "Идет загрузка"
+msgstr "Načítava"
+
+msgid "Данные загружены"
+msgstr "Dáta načítané"
+
+msgid "Название"
+msgstr "názov"
+
+msgid "Дата создания задачи"
+msgstr "Dátum vytvorenia úlohy"
+
+msgid "Дата завершения"
+msgstr "Dátum ukončenia"
+
+msgid "Выполнена"
+msgstr "Dokončené"
+
+msgid "Аварийное завершение"
+msgstr "Zrútiť sa"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Spustite, kým nebude úspešný"
+
+msgid "В процессе"
+msgstr "Prebieha"
+
+msgid "Дата последнего fail-а"
+msgstr "Dátum posledného zlyhania"
+
+msgid "Ключ группировки задач"
+msgstr "Kľúč zoskupovania úloh"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Akcia, kde sa vyskytla chyba"
+
+msgid "Счетчик попыток"
+msgstr "Počítadlo pokusov"
+
+msgid "Последняя попытка выполнения"
+msgstr "Posledný pokus o popravu"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Maximálny počet pokusov o spustenie (ak žiadne, potom nekonečné)"
+
+msgid "Период между попытками"
+msgstr "Obdobie medzi pokusmi"
+
+msgid "Родительская задача"
+msgstr "Rodičovská úloha"
+
+msgid "Задача для BotManager"
+msgstr "Úloha pre BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Úlohy pre BotManager"

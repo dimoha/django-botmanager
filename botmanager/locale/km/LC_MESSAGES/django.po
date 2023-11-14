@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Ошибка"
+msgstr "កំហុស"
+
+msgid "Вводные данные"
+msgstr "បញ្ចូល​ទិន្នន័យ"
+
+msgid "В ожидании"
+msgstr "កំពុងរង់ចាំ"
+
+msgid "Идет загрузка"
+msgstr "កំពុងផ្ទុក"
+
+msgid "Данные загружены"
+msgstr "ទិន្នន័យត្រូវបានផ្ទុក"
+
+msgid "Название"
+msgstr "ឈ្មោះ"
+
+msgid "Дата создания задачи"
+msgstr "កាលបរិច្ឆេទបង្កើតភារកិច្ច"
+
+msgid "Дата завершения"
+msgstr "កាលបរិច្ឆេទនៃការបញ្ចប់"
+
+msgid "Выполнена"
+msgstr "បានបញ្ចប់"
+
+msgid "Аварийное завершение"
+msgstr "គាំង"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "រត់រហូតដល់ជោគជ័យ"
+
+msgid "В процессе"
+msgstr "កំពុង​ដំណើរការ"
+
+msgid "Дата последнего fail-а"
+msgstr "កាលបរិច្ឆេទបរាជ័យចុងក្រោយ"
+
+msgid "Ключ группировки задач"
+msgstr "គ្រាប់ចុចដាក់ក្រុមភារកិច្ច"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "សកម្មភាពដែលកំហុសបានកើតឡើង"
+
+msgid "Счетчик попыток"
+msgstr "ព្យាយាមប្រឆាំង"
+
+msgid "Последняя попытка выполнения"
+msgstr "ការប៉ុនប៉ងអនុវត្តចុងក្រោយ"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "ចំនួនអតិបរមានៃការប៉ុនប៉ងប្រតិបត្តិ (ប្រសិនបើគ្មាន នោះគ្មានកំណត់)"
+
+msgid "Период между попытками"
+msgstr "រយៈពេលរវាងការប៉ុនប៉ង"
+
+msgid "Родительская задача"
+msgstr "ភារកិច្ចរបស់ឪពុកម្តាយ"
+
+msgid "Задача для BotManager"
+msgstr "កិច្ចការសម្រាប់ BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "ភារកិច្ចសម្រាប់ BotManager"

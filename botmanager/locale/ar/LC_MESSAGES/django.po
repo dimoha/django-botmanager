@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "Ошибка"
+msgstr "خطأ"
+
+msgid "Вводные данные"
+msgstr "ادخال البيانات"
+
+msgid "В ожидании"
+msgstr "قيد الانتظار"
+
+msgid "Идет загрузка"
+msgstr "تحميل"
+
+msgid "Данные загружены"
+msgstr "تم تحميل البيانات"
+
+msgid "Название"
+msgstr "اسم"
+
+msgid "Дата создания задачи"
+msgstr "تاريخ إنشاء المهمة"
+
+msgid "Дата завершения"
+msgstr "تاريخ الانتهاء"
+
+msgid "Выполнена"
+msgstr "مكتمل"
+
+msgid "Аварийное завершение"
+msgstr "يتحطم"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "تشغيل حتى النجاح"
+
+msgid "В процессе"
+msgstr "في تَقَدم"
+
+msgid "Дата последнего fail-а"
+msgstr "تاريخ الفشل الأخير"
+
+msgid "Ключ группировки задач"
+msgstr "مفتاح تجميع المهام"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "الإجراء الذي حدث فيه الخطأ"
+
+msgid "Счетчик попыток"
+msgstr "محاولة مضادة"
+
+msgid "Последняя попытка выполнения"
+msgstr "محاولة التنفيذ الأخيرة"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "الحد الأقصى لعدد محاولات التنفيذ (إذا لم يكن هناك عدد لا نهائي)"
+
+msgid "Период между попытками"
+msgstr "الفترة بين المحاولات"
+
+msgid "Родительская задача"
+msgstr "مهمة الوالدين"
+
+msgid "Задача для BotManager"
+msgstr "مهمة BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "مهام BotManager"

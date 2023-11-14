@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "പിശക്"
+
+msgid "Вводные данные"
+msgstr "ഇൻപുട്ട് ഡാറ്റ"
+
+msgid "В ожидании"
+msgstr "തീർപ്പാക്കാത്തത്"
+
+msgid "Идет загрузка"
+msgstr "ലോഡിംഗ്"
+
+msgid "Данные загружены"
+msgstr "ഡാറ്റ ലോഡ് ചെയ്തു"
+
+msgid "Название"
+msgstr "പേര്"
+
+msgid "Дата создания задачи"
+msgstr "ടാസ്ക് സൃഷ്ടിക്കുന്ന തീയതി"
+
+msgid "Дата завершения"
+msgstr "പൂർത്തിയാക്കിയ തീയതി"
+
+msgid "Выполнена"
+msgstr "പൂർത്തിയാക്കി"
+
+msgid "Аварийное завершение"
+msgstr "തകര്ച്ച"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "വിജയിക്കുന്നതുവരെ ഓടുക"
+
+msgid "В процессе"
+msgstr "പുരോഗതിയിൽ"
+
+msgid "Дата последнего fail-а"
+msgstr "അവസാനമായി പരാജയപ്പെട്ട തീയതി"
+
+msgid "Ключ группировки задач"
+msgstr "ടാസ്ക് ഗ്രൂപ്പിംഗ് കീ"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "പിശക് സംഭവിച്ച നടപടി"
+
+msgid "Счетчик попыток"
+msgstr "ശ്രമ കൗണ്ടർ"
+
+msgid "Последняя попытка выполнения"
+msgstr "അവസാന നിർവ്വഹണ ശ്രമം"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "നിർവ്വഹണ ശ്രമങ്ങളുടെ പരമാവധി എണ്ണം (ഒന്നുമില്ലെങ്കിൽ, അനന്തം)"
+
+msgid "Период между попытками"
+msgstr "ശ്രമങ്ങൾക്കിടയിലുള്ള കാലയളവ്"
+
+msgid "Родительская задача"
+msgstr "മാതാപിതാക്കളുടെ ചുമതല"
+
+msgid "Задача для BotManager"
+msgstr "ബോട്ട്മാനേജറിനായുള്ള ടാസ്ക്"
+
+msgid "Задачи для BotManager"
+msgstr "ബോട്ട്മാനേജറിനുള്ള ചുമതലകൾ"

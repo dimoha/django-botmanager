@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "Hiba"
+
+msgid "Вводные данные"
+msgstr "Beviteli adat"
+
+msgid "В ожидании"
+msgstr "Függőben levő"
+
+msgid "Идет загрузка"
+msgstr "Betöltés"
+
+msgid "Данные загружены"
+msgstr "Adatok betöltve"
+
+msgid "Название"
+msgstr "Név"
+
+msgid "Дата создания задачи"
+msgstr "A feladat létrehozásának dátuma"
+
+msgid "Дата завершения"
+msgstr "Teljesítés dátuma"
+
+msgid "Выполнена"
+msgstr "Befejezve"
+
+msgid "Аварийное завершение"
+msgstr "Összeomlás"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Fuss sikerig"
+
+msgid "В процессе"
+msgstr "Folyamatban"
+
+msgid "Дата последнего fail-а"
+msgstr "Utolsó sikertelenség dátuma"
+
+msgid "Ключ группировки задач"
+msgstr "Feladatcsoportosítási kulcs"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Művelet, ahol a hiba történt"
+
+msgid "Счетчик попыток"
+msgstr "Kísérletszámláló"
+
+msgid "Последняя попытка выполнения"
+msgstr "Utolsó végrehajtási kísérlet"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "A végrehajtási kísérletek maximális száma (ha nincs, akkor végtelen)"
+
+msgid "Период между попытками"
+msgstr "A kísérletek közötti időszak"
+
+msgid "Родительская задача"
+msgstr "Szülői feladat"
+
+msgid "Задача для BotManager"
+msgstr "Feladat a BotManager számára"
+
+msgid "Задачи для BotManager"
+msgstr "Feladatok a BotManager számára"

@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "Erro"
+
+msgid "Вводные данные"
+msgstr "Dados de entrada"
+
+msgid "В ожидании"
+msgstr "Pendente"
+
+msgid "Идет загрузка"
+msgstr "Carregando"
+
+msgid "Данные загружены"
+msgstr "Dados carregados"
+
+msgid "Название"
+msgstr "Nome"
+
+msgid "Дата создания задачи"
+msgstr "Data de criação da tarefa"
+
+msgid "Дата завершения"
+msgstr "Data de conclusão"
+
+msgid "Выполнена"
+msgstr "Concluído"
+
+msgid "Аварийное завершение"
+msgstr "Colidir"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "Execute até ter sucesso"
+
+msgid "В процессе"
+msgstr "Em andamento"
+
+msgid "Дата последнего fail-а"
+msgstr "Data da última falha"
+
+msgid "Ключ группировки задач"
+msgstr "Chave de agrupamento de tarefas"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "Ação onde ocorreu o erro"
+
+msgid "Счетчик попыток"
+msgstr "Contador de tentativas"
+
+msgid "Последняя попытка выполнения"
+msgstr "Última tentativa de execução"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr "Número máximo de tentativas de execução (se nenhuma, então infinito)"
+
+msgid "Период между попытками"
+msgstr "Período entre tentativas"
+
+msgid "Родительская задача"
+msgstr "Tarefa pai"
+
+msgid "Задача для BotManager"
+msgstr "Tarefa para BotManager"
+
+msgid "Задачи для BotManager"
+msgstr "Tarefas para o BotManager"

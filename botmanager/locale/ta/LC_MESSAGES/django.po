@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Ошибка"
+msgstr "பிழை"
+
+msgid "Вводные данные"
+msgstr "உள்ளீடு தரவு"
+
+msgid "В ожидании"
+msgstr "நிலுவையில் உள்ளது"
+
+msgid "Идет загрузка"
+msgstr "ஏற்றுகிறது"
+
+msgid "Данные загружены"
+msgstr "தரவு ஏற்றப்பட்டது"
+
+msgid "Название"
+msgstr "பெயர்"
+
+msgid "Дата создания задачи"
+msgstr "பணி உருவாக்கும் தேதி"
+
+msgid "Дата завершения"
+msgstr "நிறைவு தேதி"
+
+msgid "Выполнена"
+msgstr "நிறைவு"
+
+msgid "Аварийное завершение"
+msgstr "விபத்து"
+
+msgid "Выполнять пока не завершится успешно"
+msgstr "வெற்றி பெறும் வரை இயக்கவும்"
+
+msgid "В процессе"
+msgstr "நடந்து கொண்டிருக்கிறது"
+
+msgid "Дата последнего fail-а"
+msgstr "கடைசி தோல்வி தேதி"
+
+msgid "Ключ группировки задач"
+msgstr "பணிக் குழுவாக்க விசை"
+
+msgid "Action, на котором произошла ошибка"
+msgstr "பிழை ஏற்பட்ட இடத்தில் நடவடிக்கை"
+
+msgid "Счетчик попыток"
+msgstr "முயற்சி கவுண்டர்"
+
+msgid "Последняя попытка выполнения"
+msgstr "கடைசி மரணதண்டனை முயற்சி"
+
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr ""
+"செயல்படுத்தும் முயற்சிகளின் அதிகபட்ச எண்ணிக்கை (இல்லையெனில், எல்லையற்றது)"
+
+msgid "Период между попытками"
+msgstr "முயற்சிகளுக்கு இடைப்பட்ட காலம்"
+
+msgid "Родительская задача"
+msgstr "பெற்றோர் பணி"
+
+msgid "Задача для BotManager"
+msgstr "BotManager க்கான பணி"
+
+msgid "Задачи для BotManager"
+msgstr "BotManager க்கான பணிகள்"

@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: botmanager/admin.py:32
+msgid "Ошибка"
+msgstr "خاتالىق"
+
+#: botmanager/admin.py:38
+msgid "Вводные данные"
+msgstr "سانلىق مەلۇمات كىرگۈزۈش"
+
+#: botmanager/models.py:16
+msgid "В ожидании"
+msgstr "ساقلىنىۋاتىدۇ"
+
+#: botmanager/models.py:17
+msgid "Идет загрузка"
+msgstr "يۈكلەۋاتىدۇ"
+
+#: botmanager/models.py:18
+msgid "Данные загружены"
+msgstr "سانلىق مەلۇمات يۈكلەندى"
+
+#: botmanager/models.py:21
+msgid "Название"
+msgstr "ئىسمى"
+
+#: botmanager/models.py:22
+msgid "Дата создания задачи"
+msgstr "ۋەزىپە قۇرۇش ۋاقتى"
+
+#: botmanager/models.py:23
+msgid "Дата завершения"
+msgstr "تاماملانغان ۋاقىت"
+
+#: botmanager/models.py:24
+msgid "Выполнена"
+msgstr "تاماملاندى"
+
+#: botmanager/models.py:25
+msgid "Аварийное завершение"
+msgstr "كاشىلا"
+
+#: botmanager/models.py:26
+msgid "Выполнять пока не завершится успешно"
+msgstr "مۇۋەپپەقىيەت قازانغۇچە يۈگۈرۈڭ"
+
+#: botmanager/models.py:27
+msgid "В процессе"
+msgstr "ئىلگىرىلەۋاتىدۇ"
+
+#: botmanager/models.py:34
+msgid "Дата последнего fail-а"
+msgstr "ئاخىرقى مەغلۇبىيەت ۋاقتى"
+
+#: botmanager/models.py:35
+msgid "Ключ группировки задач"
+msgstr "ۋەزىپە گۇرۇپپىلاش ئاچقۇچى"
+
+#: botmanager/models.py:36
+msgid "Action, на котором произошла ошибка"
+msgstr "خاتالىق يۈز بەرگەن ھەرىكەت"
+
+#: botmanager/models.py:37
+msgid "Счетчик попыток"
+msgstr "سىناپ بېقىڭ"
+
+#: botmanager/models.py:38
+msgid "Последняя попытка выполнения"
+msgstr "ئاخىرقى ئىجرا سىنىقى"
+
+#: botmanager/models.py:40
+msgid "Максимальное кол-во попыток выполнение (если None, то бесконечно)"
+msgstr ""
+"ئىجرا قىلىشقا ئۇرۇنۇشنىڭ ئەڭ چوڭ سانى (ئەگەر بولمىسا ، ئۇنداقتا چەكسىز)"
+
+#: botmanager/models.py:42
+msgid "Период между попытками"
+msgstr "سىناقنىڭ ۋاقتى"
+
+#: botmanager/models.py:43
+msgid "Родительская задача"
+msgstr "ئاتا-ئانىلارنىڭ ۋەزىپىسى"
+
+#: botmanager/models.py:70
+msgid "Задача для BotManager"
+msgstr "BotManager نىڭ ۋەزىپىسى"
+
+#: botmanager/models.py:71
+msgid "Задачи для BotManager"
+msgstr "BotManager نىڭ ۋەزىپىسى"
