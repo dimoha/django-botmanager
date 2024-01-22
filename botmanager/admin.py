@@ -1,8 +1,15 @@
 # -*- coding: utf-8 -*-
+import os
+
 from django.contrib import admin
+from django.http import HttpResponseNotFound, FileResponse
+from django.shortcuts import get_object_or_404
+from django.urls import path
 from django.utils.html import escape
 from django.utils.translation import gettext_lazy as _
 from botmanager.models import Task
+from botmanager import settings
+from botmanager.management.commands.bot_manager import Command
 
 
 class TaskAdmin(admin.ModelAdmin):
@@ -36,5 +43,40 @@ class TaskAdmin(admin.ModelAdmin):
         return obj.input
 
     input_field.short_description = _("Вводные данные")
+
+    def change_view(self, request, object_id, form_url='', extra_context=None):
+        extra_context = extra_context or {}
+        if request.user.is_staff:
+            extra_context["show_open_logfile_button"] = True
+        return super().change_view(request, object_id, form_url, extra_context=extra_context)
+
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path("<path:task_id>/open-logfile/", self.admin_site.admin_view(self.open_logfile), name="open_logfile"),
+        ]
+        return custom_urls + urls
+
+    def open_logfile(self, request, task_id):
+        task = get_object_or_404(Task, pk=task_id)
+        imported_class = [
+            Command.import_from_string(i) for i in settings.MAIN_CONFIG["tasks"].keys()
+            if Command.import_from_string(i).name == task.name
+        ]
+
+        if not imported_class:
+            return HttpResponseNotFound()
+
+        filename = imported_class[0].get_log_file_name()
+        dir = settings.MAIN_CONFIG["logs"]["dir"]
+        file_path = os.path.join(dir, filename)
+
+        if os.path.exists(file_path):
+            return FileResponse(open(file_path, "rb"))
+        else:
+            return HttpResponseNotFound()
+
+    open_logfile.short_description = _(u"Открыть файл")
+
 
 admin.site.register(Task, TaskAdmin)

@@ -1,0 +1,12 @@
+{% extends 'admin/change_form.html' %}
+
+{% block object-tools %}
+  {{ block.super }}
+  {% if show_open_logfile_button %}
+  <li>
+    <a href="{% url 'admin:botmanager_task_open_logfile' original.pk %}" class="open-logfile">
+      Open LogFile
+    </a>
+  </li>
+  {% endif %}
+{% endblock %}
