@@ -2,9 +2,8 @@
 
 {% block object-tools-items %}
   {{ block.super }}
-<!--  {% if show_open_logfile_button %}-->
   <li>
-    <a href="{% url opts|admin_urlname:'botmanager_task_open_logfile' original.pk %}" class="open-logfile">
+    <a href="{% url 'admin:botmanager_task_open_logfile' original.pk %}" class="open-logfile">
       {% translate "Open LogFile" %}
     </a>
   </li>
