@@ -17,7 +17,7 @@ class TaskAdmin(admin.ModelAdmin):
                     'create_dt', 'finish_dt', 'error_field', 'attempt_period', 'attempt_count', 'input_field']
     list_filter = ('is_complete', 'is_failed', 'in_process', 'name')
     search_fields = ('id', 'name')
-    change_form_template = 'admin/botmanager/task_changeform.html'
+    change_form_template = 'admin/botmanager/change_form.html'
 
     def get_queryset(self, request):
         qs = super(TaskAdmin, self).get_queryset(request)
