@@ -46,6 +46,7 @@ class TaskAdmin(admin.ModelAdmin):
 
     def change_view(self, request, object_id, form_url='', extra_context=None):
         extra_context = extra_context or {}
+        extra_context['change_form_template'] = 'admin/botmanager/task/change_form.html'
         if request.user.is_staff:
             extra_context["show_open_logfile_button"] = True
         return super().change_view(request, object_id, form_url, extra_context=extra_context)
@@ -53,7 +54,9 @@ class TaskAdmin(admin.ModelAdmin):
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
-            path("<path:task_id>/open-logfile/", self.admin_site.admin_view(self.open_logfile), name="open_logfile"),
+            path("<path:task_id>/open-logfile/",
+                 self.admin_site.admin_view(self.open_logfile),
+                 name="botmanager_task_open_logfile"),
         ]
         return custom_urls + urls
 
