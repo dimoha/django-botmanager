@@ -2,7 +2,6 @@
 import os
 
 from django.contrib import admin
-from django.contrib.admin.views.decorators import staff_member_required
 from django.http import HttpResponseNotFound, FileResponse
 from django.shortcuts import get_object_or_404
 from django.urls import path
@@ -62,7 +61,6 @@ class TaskAdmin(admin.ModelAdmin):
         ]
         return custom_urls + urls
 
-    @staff_member_required
     def open_logfile(self, request, task_id):
         task = get_object_or_404(Task, pk=task_id)
         imported_class = [
