@@ -17,7 +17,7 @@ class TaskAdmin(admin.ModelAdmin):
                     'create_dt', 'finish_dt', 'error_field', 'attempt_period', 'attempt_count', 'input_field']
     list_filter = ('is_complete', 'is_failed', 'in_process', 'name')
     search_fields = ('id', 'name')
-    change_form_template = 'admin/botmanager/task/change_form.html'
+    change_form_template = 'admin/botmanager/extras/logfile_change_form.html'
 
     def get_queryset(self, request):
         qs = super(TaskAdmin, self).get_queryset(request)
@@ -47,7 +47,6 @@ class TaskAdmin(admin.ModelAdmin):
 
     def change_view(self, request, object_id, form_url='', extra_context=None):
         extra_context = extra_context or {}
-        extra_context['change_form_template'] = 'admin/botmanager/task/change_form.html'
         if request.user.is_staff:
             extra_context["show_open_logfile_button"] = True
         return super().change_view(request, object_id, form_url, extra_context=extra_context)
