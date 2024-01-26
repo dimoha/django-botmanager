@@ -1,2 +1,3 @@
 include README.md
-recursive-include botmanager
+graft botmanager
+recursive-exclude botmanager/locale *
