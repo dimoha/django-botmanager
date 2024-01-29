@@ -64,7 +64,7 @@ class TaskAdmin(admin.ModelAdmin):
         if not imported_class:
             return HttpResponseNotFound()
 
-        filename = imported_class[0].get_log_file_name()
+        filename = imported_class[0]().get_log_file_name()
         dir = settings.MAIN_CONFIG["logs"]["dir"]
         file_path = os.path.join(dir, filename)
 
