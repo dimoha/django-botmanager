@@ -66,7 +66,7 @@ class TaskAdmin(admin.ModelAdmin):
 
         filename = imported_class[0](task).get_log_file_name()
         dir = settings.MAIN_CONFIG["logs"]["dir"]
-        file_path = os.path.join(dir, filename)
+        file_path = os.path.join(dir, filename) + ".log"
 
         if os.path.exists(file_path):
             return FileResponse(open(file_path, "rb"))
