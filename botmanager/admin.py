@@ -65,8 +65,9 @@ class TaskAdmin(admin.ModelAdmin):
             return HttpResponseNotFound()
 
         filename = imported_class[0](task).get_log_file_name()
+        folder = imported_class[0].name if imported_class[0].name else ''
         dir = settings.MAIN_CONFIG["logs"]["dir"]
-        file_path = os.path.join(dir, filename) + ".log"
+        file_path = os.path.join(dir, folder, filename) + ".log"
 
         if os.path.exists(file_path):
             return FileResponse(open(file_path, "rb"))
