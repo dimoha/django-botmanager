@@ -54,6 +54,11 @@ class TaskAdmin(admin.ModelAdmin):
         ]
         return custom_urls + urls
 
+    @staticmethod
+    def file_generator(file_name):
+        with open(file_name, "rb") as file:
+            yield from file
+
     def open_logfile(self, request, task_id):
         task = get_object_or_404(Task, pk=task_id)
         imported_class = [
@@ -70,9 +75,7 @@ class TaskAdmin(admin.ModelAdmin):
         file_path = os.path.join(dir, folder, filename) + ".log"
 
         if os.path.exists(file_path):
-            with open(file_path, "rb") as f:
-                file_stream = f
-            return StreamingHttpResponse(file_stream, content_type="text/event-stream")
+            return StreamingHttpResponse(self.file_generator(file_path), content_type="text/event-stream")
         else:
             return HttpResponseNotFound()
 
