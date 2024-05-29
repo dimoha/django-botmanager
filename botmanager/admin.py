@@ -70,7 +70,8 @@ class TaskAdmin(admin.ModelAdmin):
         file_path = os.path.join(dir, folder, filename) + ".log"
 
         if os.path.exists(file_path):
-            file_stream = open(file_path, "rb")
+            with open(file_path, "rb") as f:
+                file_stream = f
             return StreamingHttpResponse(file_stream, content_type="text/event-stream")
         else:
             return HttpResponseNotFound()
