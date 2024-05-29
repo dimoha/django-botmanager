@@ -2,7 +2,7 @@
 import os
 
 from django.contrib import admin
-from django.http import HttpResponseNotFound, FileResponse
+from django.http import HttpResponseNotFound, StreamingHttpResponse
 from django.shortcuts import get_object_or_404
 from django.urls import path
 from django.utils.html import escape
@@ -70,7 +70,8 @@ class TaskAdmin(admin.ModelAdmin):
         file_path = os.path.join(dir, folder, filename) + ".log"
 
         if os.path.exists(file_path):
-            return FileResponse(open(file_path, "rb"))
+            file_stream = open(file_path, "rb")
+            return StreamingHttpResponse(file_stream, content_type="text/event-stream")
         else:
             return HttpResponseNotFound()
 
