@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-botmanager',
-    version='0.2.20',
+    version='0.2.21',
     description='Async tasks for django',
     author='Dimoha',
     author_email='dimoha@controlstyle.ru',
