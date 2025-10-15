@@ -18,6 +18,7 @@ class Task(models.Model):
         (STATUS_OK, _(u'Данные загружены')),
     )
 
+    id = models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')
     name = models.CharField(max_length=256, verbose_name=_(u'Название'))
     create_dt = models.DateTimeField(verbose_name=_(u"Дата создания задачи"), default=timezone.now)
     finish_dt = models.DateTimeField(verbose_name=_(u"Дата завершения"), null=True, blank=True)
