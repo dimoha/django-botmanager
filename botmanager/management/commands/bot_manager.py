@@ -3,9 +3,10 @@ import importlib
 import json
 import logging
 import os
+import signal
 import sys
 from datetime import datetime, timedelta
-from multiprocessing import Queue, Process
+from multiprocessing import Queue, Process, Event
 from time import sleep, time
 
 import psutil
@@ -28,6 +29,9 @@ try:
     from setproctitle import setproctitle
 except ImportError:
     setproctitle = lambda x: x
+
+
+PROCESS_TO_FINISH_GRACEFULLY_TIMEOUT = 30  # seconds
 
 
 class BotManagerCommandException(BotManagerBaseCommandException):
@@ -142,7 +146,30 @@ class Command(BotManagerBaseCommand):
         current_pid = os.getpid()
         PidsFileController.add_pid(current_pid)
 
+        shutdown_event = Event()
+
         processes = []
+
+        def signal_handler(signum, frame):
+            logging.info('Main process received signal {}'.format(signum))
+            logging.info('Start shutting down children processes gracefully...')
+            shutdown_event.set()
+
+            # Wait for processes to finish
+            for p in processes:
+                p.join(timeout=PROCESS_TO_FINISH_GRACEFULLY_TIMEOUT)
+                if p.is_alive():
+                    logging.info("Process {} didn't terminate gracefully, forcing...".format(p.pid))
+                    p.terminate()
+
+            logging.info("All children processes have been terminated. Exiting main process {}.".format(current_pid))
+
+            sys.exit(0)
+
+        # Register signal handlers
+        signal.signal(signal.SIGTERM, signal_handler)
+        signal.signal(signal.SIGINT, signal_handler)
+
         queue_dict = {}
         for task_class_string, processes_count in self.config['tasks'].items():
             cls_name = task_class_string.split('.')[-1]
@@ -158,7 +185,7 @@ class Command(BotManagerBaseCommand):
             queue_dict[task_class.name].maxsize = maxsize
 
             for i in range(processes_count):
-                tm = TaskManager(task_class, queue_dict[task_class.name], i + 1, current_pid)
+                tm = TaskManager(task_class, queue_dict[task_class.name], i + 1, current_pid, shutdown_event=shutdown_event)
                 p = Process(target=Command.start_service, args=(tm,))
                 p.name = tm.process_name
                 p.daemon = True
@@ -166,7 +193,7 @@ class Command(BotManagerBaseCommand):
                 processes.append(p)
                 PidsFileController.add_pid(p.pid)
 
-        tf = TaskFetcher(queue_dict, current_pid)
+        tf = TaskFetcher(queue_dict, current_pid, shutdown_event=shutdown_event)
         p = Process(target=Command.start_service, args=(tf,))
         p.name = tf.process_name
         p.daemon = True
@@ -175,7 +202,7 @@ class Command(BotManagerBaseCommand):
         PidsFileController.add_pid(p.pid)
 
         if not options.get('without_sheduller'):
-            ts = TaskSheduler(self.config, current_pid)
+            ts = TaskSheduler(self.config, current_pid, shutdown_event=shutdown_event)
             p = Process(target=Command.start_service, args=(ts,))
             p.name = ts.process_name
             p.daemon = True
@@ -234,16 +261,16 @@ class Command(BotManagerBaseCommand):
 class TaskSheduler(object):
     SET_PERIOD_SECONDS = 5
 
-    def __init__(self, config, parent_pid):
+    def __init__(self, config, parent_pid, shutdown_event=None):
         self.process_name = "BotManager.TaskSheduler"
         self.config = config
         self.parent_pid = parent_pid
         self.shedule_cache = {}
+        self.shutdown_event = shutdown_event
 
     def run(self):
         setproctitle(self.process_name)
-        while True:
-
+        while not self.shutdown_event.is_set():
             if os.getppid() != self.parent_pid:
                 logging.info(u"Parent process is die. Exit..")
                 break
@@ -259,6 +286,7 @@ class TaskSheduler(object):
                         logging.exception(e)
 
             sleep(self.SET_PERIOD_SECONDS)
+        logging.info(u"TaskSheduler process shutdown gracefully.")
 
     def _time_to_set_tasks_for(self, task_class):
         last_shedule_time = self.shedule_cache.get(task_class.name)
@@ -268,11 +296,12 @@ class TaskSheduler(object):
 
 class TaskFetcher(object):
 
-    def __init__(self, queue_dict, parent_pid):
+    def __init__(self, queue_dict, parent_pid, shutdown_event=None):
         self.process_name = "BotManager.TaskFetcher"
         self.queue_dict = queue_dict
         self.parent_pid = parent_pid
         self.config = settings.MAIN_CONFIG
+        self.shutdown_event = shutdown_event
 
     def run(self):
         """
@@ -289,7 +318,7 @@ class TaskFetcher(object):
         """
         setproctitle(self.process_name)
         Task.objects.filter(in_process=True).update(in_process=False)
-        while True:
+        while not self.shutdown_event.is_set():
             try:
 
                 if os.getppid() != self.parent_pid:
@@ -341,6 +370,8 @@ class TaskFetcher(object):
 
             sleep(self.config['fetch_period'])
 
+        logging.info(u"TaskFetcher shutdown gracefully.")
+
     def _get_qsize(self, task):
         try:
             return self.queue_dict[task.name].qsize()
@@ -351,12 +382,13 @@ class TaskFetcher(object):
 
 
 class TaskManager(object):
-    def __init__(self, task_class, queue, process_num, parent_pid):
+    def __init__(self, task_class, queue, process_num, parent_pid, shutdown_event=None):
         self.task_class = task_class
         self.queue = queue
         self.process_num = process_num
         self.process_name = u"BotManager.{0}.{1}".format(self.task_class.name, self.process_num)
         self.parent_pid = parent_pid
+        self.shutdown_event = shutdown_event
 
     def __str__(self):
         return self.process_name
@@ -367,7 +399,7 @@ class TaskManager(object):
 
     def run(self):
         setproctitle(self.process_name)
-        while True:
+        while not self.shutdown_event.is_set():
             try:
 
                 if os.getppid() != self.parent_pid:
@@ -389,6 +421,8 @@ class TaskManager(object):
                 logging.exception(
                     u"Error in queue preparing: %s".format(e)
                 )
+
+        logging.info(u"TaskManager process {} shutdown gracefully.".format(self.process_name))
 
 
 class PidsFileController(object):
@@ -458,4 +492,3 @@ class PidsFileController(object):
 
         if os.path.exists(pids_file_name):
             os.remove(pids_file_name)
-
