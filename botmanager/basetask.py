@@ -7,7 +7,7 @@ import json
 from botmanager import settings
 from botmanager.models import Task
 from django.conf import settings as project_settings
-from django.db import connection
+from django.db import connections
 from datetime import datetime, timedelta
 from hashlib import md5
 from botmanager import BotManagerTaskError
@@ -238,6 +238,6 @@ class BotManagerBaseTask(object):
         is_success = not is_failed or is_error_handled
         self._on_finish(is_success=is_success, is_complete=is_complete)
         self.task.save()
-        logging.info('Closing connection to DB...')
-        connection.close()
+        logging.info('Closing all connections to DB...')
+        connections.close_all()
         logging.info('End run task {} id {}'.format(self.name, self.task.pk))
